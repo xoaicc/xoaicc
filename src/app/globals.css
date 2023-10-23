@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Ephesis";
+  src: url('./assets/fonts/Ephesis/Ephesis-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Grenze Gotisch";
+  src: url('./assets/fonts/Grenze_Gotisch/GrenzeGotisch-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: "Vina Sans";
+  src: url('./assets/fonts/Vina_Sans/VinaSans-Regular.ttf');
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +31,67 @@
   }
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Vina Sans', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 6px;
+}
+
+h2 {
+  font-size: 2.4rem;
+  letter-spacing: 5px;
+}
+
+p {
+  font-family: 'Grenze Gotisch', serif;
+}
+
+.effectFont {
+  color: transparent;
+  position: relative;
+}
+
+.effectFont::before,
+.effectFont::after {
+  content: attr(title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.effectFont::before {
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, .4);
+  z-index: 1;
+}
+
+.effectFont::after {
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, .1);
+  z-index: 0;
+}
+
+.specialFont {
+  font-family: 'Ephesis', cursive;
+  ;
 }
