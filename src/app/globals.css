@@ -91,6 +91,12 @@ p {
   z-index: 0;
 }
 
+.effectFont2 {
+  color: rgba(253, 186, 116, 1);
+  -webkit-text-stroke: .1px rgba(0, 0, 0, 1);
+  text-shadow: 0 0 15px rgba(255, 255, 255, .6);
+}
+
 .specialFont {
   font-family: 'Ephesis', cursive;
   ;
