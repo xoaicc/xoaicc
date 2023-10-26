@@ -1,6 +1,7 @@
 import Banner from "./components/Banner";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar";
+import Timeline from "./components/Timeline";
 
 export default function Homepage() {
     return (
@@ -13,7 +14,10 @@ export default function Homepage() {
 
                 <main>
                     <Banner />
-                    <div className="h-[100rem]"></div>
+                    <div>
+                        <h2 className="uppercase effectFont2">Education</h2>
+                        <Timeline />
+                    </div>
                 </main>
 
                 <footer>
